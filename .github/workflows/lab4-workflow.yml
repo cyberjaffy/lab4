@@ -6,6 +6,9 @@ on:
     
 jobs:
     npm-package:
+      permissions:
+        packages: write
+      
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
@@ -18,4 +21,5 @@ jobs:
         - run: npm publish
           env:
             NODE_AUTH_TOKEN: ${{ secrets.MY_GITHUB_SECRETS }}
+
 
