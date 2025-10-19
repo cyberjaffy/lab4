@@ -15,5 +15,6 @@ jobs:
             node-version: '20.x'
             registry-url: 'https://npm.pkg.github.com/'
         - run: npm install
-
-
+        - run: npm publish
+          env:
+            NODE_AUTH_TOKEN: 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
